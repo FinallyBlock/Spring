@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<h1>MCONS</h1>
+<h2>Welcome to MCONS!</h2>
+<h4>World's Largest Movie Container!!</h4>
+
+<p> MCONS stands for Movie Container and it has information about movies of all Languages and different countries arround the World .As you are here, Explore and Enjoy!!"<p>
+<br><br><br><br>
+<form role="form" name="myMovieForm" th:object="${title}" th:action="@{/MyFilm}" method="post">
+ <label>Movie Id</label>
+ <input type="text" name="id" id="id" placeholder="Movie id" autofocus="autofocus" />
+<button  type="submit">Save Album</button>
+</form>
+<br><br><br><br>
+<br><br><br><br>
+<a type="button" th:href="@{/addMovie}">Submit A Movie</a>
+<br><br><br><br>
+<br><br><br><br>
+<a type="button" th:href="@{/ActorList}">All Actors</a>
+<a type="button" th:href="@{/FilmList}">All Movies</a>
+ 
+</body>
+</html>

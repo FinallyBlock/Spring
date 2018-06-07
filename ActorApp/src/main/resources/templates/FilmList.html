@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+ th, td {
+    padding: 5px;
+    text-align: left;
+}
+</style>
+</head>
+<body>
+<table id="actors-data" style="width:100%">
+  <tr>
+    <th>film_id</th>
+    <th>title</th>
+    <th>description</th> 
+    <th>release_year</th>
+  </tr>
+  
+  <tr th:each="message : ${messages}">
+        <td th:text="${message.film_id}">1</td>
+        <td><a href="#" th:text="${message.title}">Title ...</a></td>
+        <td th:text="${message.description}">Text ...</td>
+        <td th:text="${message.release_year}">Text ...</td>
+    </tr>
+  
+</table>
+
+
+
+
+
+
+
+</body>
+</html>
